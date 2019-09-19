@@ -1,0 +1,15 @@
+* Python 3.7 - Linguagem principal
+
+* PyCharm e/ou Visual Studio Code - IDE
+
+* BeautifulSoap e/ou Selenium - Biblioteca
+
+* Django e/ou Javascript e/ou HTML5 e/ou CSS - Auxiliares para interface WEB
+
+* MySQL - Banco de Dados
+
+* Conceitos do SCRUM - Norteador do Projeto
+
+* Zen of Python - boas práticas para o Projeto
+
+* Git - repositório
