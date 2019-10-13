@@ -8,17 +8,19 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import pymysql
 import time
+cont = int(1)
+wait =int(2) # Trocar aqui os tempos de espera - mudar para rodar na FATEC devido a INTERNET lenta
 options = Options()
 options.add_argument('--headless')
 options.add_argument('--disable-gpu')
 ff = webdriver.Chrome(options=options)
 ff.get('https://br.tradingview.com/symbols/BMFBOVESPA-BIDI4/')
 while (True):
-    print ('Iniciando coleta')
-    time.sleep(5)
+    print ('Iniciando',cont,'º coleta')
+    time.sleep(wait)
     html=ff.page_source
     soup=BeautifulSoup(html,"html.parser")
-    time.sleep(5)
+    time.sleep(wait)
     ##-----------------------------------##
     filtro1 = soup.find_all(class_='tv-symbol-price-quote__value js-symbol-last')
     filtro1 = (filtro1[0].text.replace('−','-'))
@@ -28,8 +30,9 @@ while (True):
     ##-----------------------------------
     filtro3 = soup.find_all(class_='js-symbol-change-pt tv-symbol-price-quote__change-value')
     filtro3 = (filtro3[0].text[1:-1].replace('−','-'))
-    print (filtro1,"\n",filtro2,"\n",filtro3)
-    print("--------------------------------------------------------------------------------")
+    print (filtro1," / ",filtro2," / ",filtro3,"\n")
+   # print("----------------------------------")
+    cont = cont +1
     ff.refresh()
 
     #
