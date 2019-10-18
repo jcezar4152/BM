@@ -32,6 +32,8 @@ while (True):
     filtro3 = (filtro3[0].text[1:-1].replace('−','-'))
     print (filtro1," / ",filtro2," / ",filtro3,"\n")
    # print("----------------------------------")
+    ###Armazenando link com noticias na variavel noticia.
+    noticia=soup.find_all("a",{"class": "tv-widget-news tv-widget-news--link js-widget-news-link js-ga-track-news-escape"})
     cont = cont +1
     ff.refresh()
 
