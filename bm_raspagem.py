@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import pymysql
 import time
 cont = int(1)
-wait =int(2) # Trocar aqui os tempos de espera - mudar para rodar na FATEC devido a INTERNET lenta
+wait =int(300) # Trocar aqui os tempos de espera - mudar para rodar na FATEC devido a INTERNET lenta
 options = Options()
 options.add_argument('--headless')
 options.add_argument('--disable-gpu')
@@ -20,7 +20,7 @@ while (True):
     time.sleep(wait)
     html=ff.page_source
     soup=BeautifulSoup(html,"html.parser")
-    time.sleep(wait)
+    time.sleep(2)
     ##-----------------------------------##
     filtro1 = soup.find_all(class_='tv-symbol-price-quote__value js-symbol-last')
     filtro1 = (filtro1[0].text.replace('−','-'))
