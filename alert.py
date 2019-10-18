@@ -1,22 +1,26 @@
-import smtplib
-import email.mime.text
+#Importando Bibliotecas - Não necessário instalação via PIP pois são nativas do Python!
+import smtplib # Biblioteca para utilizar o protocolo SMTP no envio de Emails
+import email.mime.text # Função para envio de email em Texto Básico
 
+# INICIO - Autenticação de Email - host e port padrão do GMAIL
 smtp_ssl_host = 'smtp.gmail.com'
 smtp_ssl_port = 465
+username = 'COLOCAREMAIL@gmail.com'
+password = 'SENHORA'
+# FIM - Autenticação de Email
 
-username = 'blackmanbabd@gmail.com'
-password = '123456BD'
-
-from_addr = 'blackmanbabd@gmail.com'
-to_addrs = ['daniel.delgado.rocha@gmail.com','blackmanbabd@hotmail.com']
-
+# INICIO - Definição das váriavéis do envio de Email
+from_addr = 'COLOCAREMAIL@gmail.com'
+to_addrs = ['COLOCAREMAIL@gmail.com','COLOCAREMAIL@hotmail.com']
 message = email.mime.text.MIMEText('TESTE BLACKY')
 message['subject'] = 'TESTE BLACK'
 message['from'] = from_addr
 message['to'] = ', '.join(to_addrs)
+# FIM - Definição do Email
 
-server = smtplib.SMTP_SSL(smtp_ssl_host, smtp_ssl_port)
-server.login(username, password)
-server.sendmail(from_addr, to_addrs, message.as_string())
-server.quit()
-print("Deu bom!")
+server = smtplib.SMTP_SSL(smtp_ssl_host, smtp_ssl_port) # Realiza conexão segura com o servidor do Email
+server.login(username, password) # Interação com o servidor: Insere Usuario e Senha
+server.sendmail(from_addr, to_addrs, message.as_string()) # Interação com o servidor: Envia o Email
+server.quit() # Fecha conexão com o servidor do Email
+
+print("E-mail enviado com sucesso!")
