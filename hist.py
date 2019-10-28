@@ -1,9 +1,47 @@
-from selenium import webdriver
-from bs4 import BeautifulSoup as bs
-import time
-nav=webdriver.Chrome
-nav.get("http://200.147.99.191/acao/cotacoes-historicas.html?codigo=BIDI4.SA&beginDay=26&beginMonth=10&beginYear=2018&endDay=26&endMonth=10&endYear=2019&size=200&page=1&period=")
-time.sleep(10)
-page=nav.page_source()
-soup=bs(page,"html.parser")
-print (soup)
+from bs4 import BeautifulSoup
+import requests
+b=8
+c=9
+d=10
+e=11
+f=12
+g=13
+h=14
+nav=requests.get("http://200.147.99.191/acao/cotacoes-historicas.html?codigo=BIDI4.SA&beginDay=26&beginMonth=10&beginYear=2018&endDay=26&endMonth=10&endYear=2019&size=200&page=1&period=")
+html=nav.text
+soup=BeautifulSoup(html,'html.parser')
+a=soup.findAll('td')
+arq=open('/home/user/Documents/hist.csv','w')
+valida=True
+while(valida==True):
+        if(b<1408):
+                arq.write('\n'+a[b].text+";"+a[c].text+";"+a[d].text+";"+a[e].text+";"+a[f].text+";"+a[g].text+";"+a[h].text)
+                b=b+7
+                c=c+7
+                d=d+7
+                e=e+7
+                f=f+7
+                g=g+7
+                h=h+7
+                if(b==1408):
+                        b=8
+                        c=9
+                        d=10
+                        e=11
+                        f=12
+                        g=13
+                        h=14
+                        nav=requests.get("http://200.147.99.191/acao/cotacoes-historicas.html?codigo=BIDI4.SA&beginDay=26&beginMonth=10&beginYear=2018&endDay=26&endMonth=10&endYear=2019&size=200&page=2&period=")
+                        html=nav.text
+                        soup=BeautifulSoup(html,'html.parser')
+                        a=soup.findAll('td')
+                        while(valida==True):
+                                if(b<1408):
+                                        arq.write('\n'+a[b].text+";"+a[c].text+";"+a[d].text+";"+a[e].text+";"+a[f].text+";"+a[g].text+";"+a[h].text)
+                                        b=b+7
+                                        c=c+7
+                                        d=d+7
+                                        e=e+7
+                                        f=f+7
+                                        g=g+7
+                                        h=h+7
