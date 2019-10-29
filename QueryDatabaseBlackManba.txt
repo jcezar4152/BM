@@ -11,10 +11,10 @@ SenhaUser varchar(40) not null,
 primary key(id_cli)
 );
 
-create table roles
+create table TipoUsu
 (
-idRole int not null auto_increment,
-nomeRole varchar(20) not null,
-DataRole date not null,
+idRoleTU int not null auto_increment,
+nomeRoleTU varchar(20) not null,
+TipoUsuTU varchar(10) not null,
 primary key(id_dep)
 );
