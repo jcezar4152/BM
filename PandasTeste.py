@@ -1,5 +1,12 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import pymysql
+
+
+connection = pymysql.connect(host='bvzfdagnfqepipz70gyw-mysql.services.clever-cloud.com',
+                                 port=3306,
+                                 user='ufgpsjx1cswrmye3',
+                                 password='ZoKM7HXwAaZAgd9ugpTr')
 
 
 df = pd.read_sql("select * from test.uservitals", dbConnection)
