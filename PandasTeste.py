@@ -9,10 +9,14 @@ connection = pymysql.connect(host='bvzfdagnfqepipz70gyw-mysql.services.clever-cl
                                  password='ZoKM7HXwAaZAgd9ugpTr')
 
 
-df = pd.read_sql("select * from test.uservitals", dbConnection)
+df = pd.read_sql("select * from test.uservitals", connection) #substituir test.uservitals pelo nome da tabela
 #df = pd.read_csv('arq1.csv', sep=';')
 
 plt.plot(df['Valor_total'], df['Valor_queda'])
 plt.show()
+
+#esse seria o suposto modo de fazer funcionar caso o plot não funcione 
+#pd.set_option('display.expand_df_repr', False)
+#print(df)
 
 connection.close()
