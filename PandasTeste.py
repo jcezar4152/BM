@@ -14,3 +14,5 @@ df = pd.read_sql("select * from test.uservitals", dbConnection)
 
 plt.plot(df['Valor_total'], df['Valor_queda'])
 plt.show()
+
+connection.close()
