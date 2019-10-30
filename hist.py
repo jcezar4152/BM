@@ -24,6 +24,7 @@ connection = pymysql.connect(host='bvzfdagnfqepipz70gyw-mysql.services.clever-cl
                                  port=3306,
                                  user='ufgpsjx1cswrmye3',
                                  password='ZoKM7HXwAaZAgd9ugpTr')
+cursor = connection.cursor()
 while(valida==True):
 
         data_acao=a[b].text
@@ -43,14 +44,15 @@ while(valida==True):
         valor_porc=a[g].text.replace(",",".")
         valor_porc=float(valor_porc)
 
-        volume=a[h].text.replace(",",".")
-        volume=float(volume)
-
-        cursor = connection.cursor()
-        cursor.execute(
-                "INSERT INTO bvzfdagnfqepipz70gyw.Historico(data_acao, valor_fechado, valor_minimo, valor_maximo, valor_variacao, variacao_porc, volume) VALUES('%s', '%f', '%f','%f','%f','%f','%f')"%(data_acao,valor_fechado,valor_minimo,valor_maximo,valor_variacao,valor_porc,volume))
-        connection.commit()
-        connection.close()
+        volume=a[h].text.replace(".","")
+        volume=int(volume)
+        try:
+                cursor.execute(
+                        "INSERT INTO bvzfdagnfqepipz70gyw.Historico(data_acao, valor_fechado, valor_minimo, valor_maximo, valor_variacao, variacao_porc, volume) VALUES('%s', '%f', '%f','%f','%f','%f','%f')"%(data_acao,valor_fechado,valor_minimo,valor_maximo,valor_variacao,valor_porc,volume))
+                connection.commit()
+                print(data_acao,"Inserido com sucesso")    
+        except:
+                print(data_acao,"Já existe")      
         b=b+7
         c=c+7
         d=d+7
@@ -58,7 +60,7 @@ while(valida==True):
         f=f+7
         g=g+7
         h=h+7
-        '''###Agora iremos alterar a pagina para pegar o restante dos dados, foi necessario zerar os contadores pois Ã© "uma nova pagina".
+        ###Agora iremos alterar a pagina para pegar o restante dos dados, foi necessario zerar os contadores pois Ã© "uma nova pagina".
         if(b==1401):
                 arq.close()
                 nav=requests.get("http://200.147.99.191/acao/cotacoes-historicas.html?codigo=BIDI4.SA&beginDay="+diaI+"&beginMonth="+mesI+"&beginYear="+anoI+"&endDay="+diaF+"&endMonth="+mesF+"&endYear="+anoF+"&size=200&page=2&period=")
@@ -72,9 +74,14 @@ while(valida==True):
                 f=12# VALOR da variaÃ§Ã£o
                 g=13# VARIAÃÃO em porcentagem
                 h=14# VOLUME "transaÃ§Ãµes"
-                print(dados)
                 while(valida==True):
-                        dados.append(a[b].text+";"+a[c].text+";"+a[d].text+";"+a[e].text+";"+a[f].text+";"+a[g].text+";"+a[h].text+'\n')
+                        try:
+                                cursor.execute(
+                                        "INSERT INTO bvzfdagnfqepipz70gyw.Historico(data_acao, valor_fechado, valor_minimo, valor_maximo, valor_variacao, variacao_porc, volume) VALUES('%s', '%f', '%f','%f','%f','%f','%f')"%(data_acao,valor_fechado,valor_minimo,valor_maximo,valor_variacao,valor_porc,volume))
+                                connection.commit()
+                                print(data_acao,"Inserido com sucesso")  
+                        except:
+                                print(data_acao,"Já existe")      
                         b=b+7
                         c=c+7
                         d=d+7
@@ -82,12 +89,6 @@ while(valida==True):
                         f=f+7
                         g=g+7
                         h=h+7
-                        print(dados)
                         if(b<=337):
                                 valida=False
-                        cursor = connection.cursor()
-                        cursor.execute(
-                                "INSERT INTO bvzfdagnfqepipz70gyw.Valor_acoes(Value, IncDec, Variation) VALUES('%s', '%s', '%s')" % (
-                                filtro1, filtro2, filtro3))
-                        connection.commit()
-                        connection.close()'''
+connection.close()
