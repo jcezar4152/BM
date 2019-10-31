@@ -1,0 +1,20 @@
+create database BlackManba;
+use BlackManba;
+
+create table Usuario
+(
+idUser int not null auto_increment,
+nomeUser varchar(40) not null,
+idadeUser date not null,
+LoginUser varchar(40) not null,
+SenhaUser varchar(40) not null,
+primary key(id_cli)
+);
+
+create table TipoUsu
+(
+idRoleTU int not null auto_increment,
+nomeRoleTU varchar(20) not null,
+TipoUsuTU varchar(10) not null,
+primary key(id_dep)
+);
