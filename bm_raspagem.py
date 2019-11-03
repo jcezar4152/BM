@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import pymysql
 import time
 cont = int(1)
-wait =int(300) # Trocar aqui os tempos de espera - mudar para rodar na FATEC devido a INTERNET lenta
+wait =int(2) # Trocar aqui os tempos de espera - mudar para rodar na FATEC devido a INTERNET lenta
 options = Options()
 options.add_argument('--headless')
 options.add_argument('--disable-gpu')

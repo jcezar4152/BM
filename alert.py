@@ -5,13 +5,13 @@ import email.mime.text # Função para envio de email em Texto Básico
 # INICIO - Autenticação de Email - host e port padrão do GMAIL
 smtp_ssl_host = 'smtp.gmail.com'
 smtp_ssl_port = 465
-username = 'COLOCAREMAIL@gmail.com'
-password = 'SENHORA'
+username = 'blackmanbabd@gmail.com'
+password = '123456BD'
 # FIM - Autenticação de Email
 
 # INICIO - Definição das váriavéis do envio de Email
-from_addr = 'COLOCAREMAIL@gmail.com'
-to_addrs = ['COLOCAREMAIL@gmail.com','COLOCAREMAIL@hotmail.com']
+from_addr = 'blackmanbabd@gmail.com'
+to_addrs = ['blackmambabd@gmail.com','daniel.delgado.rocha@gmail.com']
 message = email.mime.text.MIMEText('TESTE BLACKY')
 message['subject'] = 'TESTE BLACK'
 message['from'] = from_addr
