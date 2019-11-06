@@ -8,7 +8,10 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import pymysql
 import time
+from alert import hahaha
+
 cont = int(1)
+trigger_email = []
 wait =int(2) # Trocar aqui os tempos de espera - mudar para rodar na FATEC devido a INTERNET lenta
 options = Options()
 options.add_argument('--headless')
@@ -24,6 +27,7 @@ while (True):
     ##-----------------------------------##
     filtro1 = soup.find_all(class_='tv-symbol-price-quote__value js-symbol-last')
     filtro1 = (filtro1[0].text.replace('−','-'))
+    trigger_email.append(filtro1)
     ##-----------------------------------
     filtro2 = soup.find_all(class_='js-symbol-change tv-symbol-price-quote__change-value')
     filtro2 = (filtro2[0].text.replace('−','-'))
@@ -49,3 +53,10 @@ while (True):
     cursor.execute("INSERT INTO bvzfdagnfqepipz70gyw.Valor_acoes(Value, IncDec, Variation) VALUES('%s', '%s', '%s')" %(filtro1,filtro2,filtro3))
     connection.commit()
     connection.close()
+
+    if trigger_email[-1:] == trigger_email[-2:-1]:
+            hahaha("Hora de Comprar","Alerta: Ação do Inter valorizada")
+            print("Alerda Enviado: Compra")
+    if trigger_email[:-1] > trigger_email[-2:-1] > trigger_email[-3:-2] > trigger_email[-4:-3]:
+            hahaha("Cara, compra logo","Alerta: Ação do Inter MUITO valorizada")
+            print("Alerda Enviado: Compra Logo")
