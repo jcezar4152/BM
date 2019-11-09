@@ -52,11 +52,13 @@ while (True):
     cursor = connection.cursor()
     cursor.execute("INSERT INTO bvzfdagnfqepipz70gyw.Valor_acoes(Value, IncDec, Variation) VALUES('%s', '%s', '%s')" %(filtro1,filtro2,filtro3))
     cursor.execute("SELECT email FROM bvzfdagnfqepipz70gyw.Usuario")
-    q_result = cursor.fetchall()
+    q_result = list(cursor.fetchall())
     connection.commit()
     connection.close()
-    for row in q_result:
-        to_addrs = to_addrs.join(', '.join(row))
+    to_addrs = '' # q_result[0:1]
+    for x in list(q_result):
+        to_addrs += ''.join(x)
+        to_addrs += ''.join(', ')
 
     if trigger_email[-1:] == trigger_email[-2:-1] and trigger_email[-2:-1] == trigger_email[-3:-2]:
         hahaha("Alerta: Ação do Inter MUITO valorizada","Cara, compra logo",to_addrs)
