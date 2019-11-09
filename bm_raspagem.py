@@ -53,10 +53,12 @@ while (True):
     cursor.execute("INSERT INTO bvzfdagnfqepipz70gyw.Valor_acoes(Value, IncDec, Variation) VALUES('%s', '%s', '%s')" %(filtro1,filtro2,filtro3))
     connection.commit()
     connection.close()
-
-    if trigger_email[-1:] == trigger_email[-2:-1]:
-            hahaha("Hora de Comprar","Alerta: Ação do Inter valorizada")
-            print("Alerda Enviado: Compra")
-    if trigger_email[:-1] > trigger_email[-2:-1] > trigger_email[-3:-2] > trigger_email[-4:-3]:
-            hahaha("Cara, compra logo","Alerta: Ação do Inter MUITO valorizada")
-            print("Alerda Enviado: Compra Logo")
+    teste = trigger_email[:-1]
+    teste2 = trigger_email[-2:-1]
+    if trigger_email[-1:] == trigger_email[-2:-1] and trigger_email[-2:-1] == trigger_email[-3:-2]:
+            hahaha("Alerta: Ação do Inter MUITO valorizada","Cara, compra logo")
+            print("Alerta Enviado: Compra Logo")
+    else:
+        if trigger_email[-1:] == trigger_email[-2:-1]:
+                hahaha("Alerta: Ação do Inter valorizada", "Hora de Comprar")
+                print("Alerta Enviado: Compra 1")
