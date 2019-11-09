@@ -51,14 +51,17 @@ while (True):
 
     cursor = connection.cursor()
     cursor.execute("INSERT INTO bvzfdagnfqepipz70gyw.Valor_acoes(Value, IncDec, Variation) VALUES('%s', '%s', '%s')" %(filtro1,filtro2,filtro3))
+    cursor.execute("SELECT email FROM bvzfdagnfqepipz70gyw.Usuario")
+    q_result = cursor.fetchall()
     connection.commit()
     connection.close()
-    teste = trigger_email[:-1]
-    teste2 = trigger_email[-2:-1]
+    for row in q_result:
+        to_addrs = to_addrs.join(', '.join(row))
+
     if trigger_email[-1:] == trigger_email[-2:-1] and trigger_email[-2:-1] == trigger_email[-3:-2]:
-            hahaha("Alerta: Ação do Inter MUITO valorizada","Cara, compra logo")
-            print("Alerta Enviado: Compra Logo")
+        hahaha("Alerta: Ação do Inter MUITO valorizada","Cara, compra logo",to_addrs)
+        print("Alerta Enviado: Compra Logo")
     else:
         if trigger_email[-1:] == trigger_email[-2:-1]:
-                hahaha("Alerta: Ação do Inter valorizada", "Hora de Comprar")
-                print("Alerta Enviado: Compra 1")
+            hahaha("Alerta: Ação do Inter valorizada", "Hora de Comprar",to_addrs)
+            print("Alerta Enviado: Compra 1")
