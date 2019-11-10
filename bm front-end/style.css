@@ -33,7 +33,7 @@
 
 .sidebar-nav {
   position: relative;
-  top: 0;
+  top: 50px;
   width: 250px;
   list-style: none;
   margin: 0;
@@ -129,6 +129,10 @@
   background-color: rgb(8, 94, 155);
 }
 
+.btn:active {
+  background-color: rgb(8, 94, 155);
+}
+
 .dropdown-toggle {
   color: white;
 }
@@ -136,10 +140,32 @@
 .cards {
   width: 1000px;
   height: 380px;
-  margin-top: 3%;
+  margin-top: 1%;
   margin-left: 20%;
 }
 
+#cardorganizador {
+  margin-top: 3%;
+  margin-left: 20%;
+  border-color: transparent;
+}
+
+#indextopbar {
+  height: 150px;
+  background: rgb(0, 114, 188);
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+#form {
+  position: absolute;
+  left: 100;
+}
 /* responsive section */
 @media (max-width: 767px) {
   #wrapper {
@@ -164,6 +190,18 @@
   .inset {
     padding: 15px;
   }
+
+  .btn {
+    margin-left: 80%;
+    margin-top: 1%;
+  }
+
+  .cards {
+    width: 260px;
+    height: 180px;
+    margin-top: 3%;
+    margin-left: 30%;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -172,7 +210,6 @@
   }
 
   .btn {
-    background-color: transparent;
     margin-left: 75%;
     margin-top: 1%;
   }
@@ -181,7 +218,7 @@
     width: 270px;
     height: 180px;
     margin-top: 3%;
-    margin-left: 30%;
+    margin-left: 20%;
   }
 
   #wrapper {
