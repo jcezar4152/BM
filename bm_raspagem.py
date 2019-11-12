@@ -8,19 +8,20 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import pymysql
 import time
-import schedule
+from datetime import datetime
 from alert import hahaha
 
-def job():
-    cont = int(1)
-    trigger_email = []
-    wait =int(10) # Trocar aqui os tempos de espera - mudar para rodar na FATEC devido a INTERNET lenta
-    options = Options()
-    options.add_argument('--headless')
-    options.add_argument('--disable-gpu')
-    ff = webdriver.Chrome(options=options)
-    ff.get('https://br.tradingview.com/symbols/BMFBOVESPA-BIDI4/')
-    while (True):
+cont = int(1)
+trigger_email = []
+wait =int(10) # Trocar aqui os tempos de espera - mudar para rodar na FATEC devido a INTERNET lenta
+options = Options()
+options.add_argument('--headless')
+options.add_argument('--disable-gpu')
+ff = webdriver.Chrome(options=options)
+ff.get('https://br.tradingview.com/symbols/BMFBOVESPA-BIDI4/')
+while (True):
+    now = datetime.now()
+    while (now.hour <= 20 and now.minute <= 45) and (now.hour >= 10 and now.minute >= 15):
         print ('Iniciando',cont,'º coleta')
         time.sleep(wait)
         html=ff.page_source
@@ -53,6 +54,7 @@ def job():
         cursor.execute("INSERT INTO bvzfdagnfqepipz70gyw.Valor_acoes(Value, IncDec, Variation) VALUES('%s', '%s', '%s')" %(filtro1,filtro2,filtro3))
         connection.commit()
         connection.close()
+        now = datetime.now()
         """"
         cursor = connection.cursor()
         cursor.execute("INSERT INTO bvzfdagnfqepipz70gyw.Valor_acoes(Value, IncDec, Variation) VALUES('%s', '%s', '%s')" %(filtro1,filtro2,filtro3))
@@ -73,8 +75,3 @@ def job():
                 hahaha("Alerta: Ação do Inter valorizada", "Hora de Comprar",to_addrs)
                 print("Alerta Enviado: Compra 1")
         """
-schedule.every().day.at("10:20").do(job)
-
-while True:
-    schedule.run_pending()
-    time.sleep(1)
