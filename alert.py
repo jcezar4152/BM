@@ -16,7 +16,7 @@ def hahaha(assunto, mensagem, to_addrs):
     message = email.mime.text.MIMEText(mensagem)
     message['subject'] = assunto
     message['from'] = from_addr
-    message['to'] = to_addrs #', '.join(to_addrs)
+    message['bcc'] = to_addrs #', '.join(to_addrs).
     # FIM - Definição do Email
 
     server = smtplib.SMTP_SSL(smtp_ssl_host, smtp_ssl_port) # Realiza conexão segura com o servidor do Email

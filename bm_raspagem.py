@@ -20,8 +20,7 @@ options.add_argument('--disable-gpu')
 ff = webdriver.Chrome(options=options)
 ff.get('https://br.tradingview.com/symbols/BMFBOVESPA-BIDI4/')
 while (True):
-    now = datetime.now()
-    while (now.hour <= 20 and now.minute <= 45) and (now.hour >= 10 and now.minute >= 15):
+    while (datetime.now().hour <= 22 and datetime.now().hour >= 10):
         print ('Iniciando',cont,'º coleta')
         time.sleep(wait)
         html=ff.page_source
@@ -52,21 +51,15 @@ while (True):
 
         cursor = connection.cursor()
         cursor.execute("INSERT INTO bvzfdagnfqepipz70gyw.Valor_acoes(Value, IncDec, Variation) VALUES('%s', '%s', '%s')" %(filtro1,filtro2,filtro3))
-        connection.commit()
-        connection.close()
-        now = datetime.now()
-        """"
-        cursor = connection.cursor()
-        cursor.execute("INSERT INTO bvzfdagnfqepipz70gyw.Valor_acoes(Value, IncDec, Variation) VALUES('%s', '%s', '%s')" %(filtro1,filtro2,filtro3))
         cursor.execute("SELECT email FROM bvzfdagnfqepipz70gyw.Usuario")
         q_result = list(cursor.fetchall())
         connection.commit()
         connection.close()
-        to_addrs = '' # q_result[0:1]
+        to_addrs = '' # q_result[0:1].
         for x in list(q_result):
             to_addrs += ''.join(x)
-            to_addrs += ''.join(', ')
-    
+            to_addrs += ''.join('; ')
+
         if trigger_email[-1:] == trigger_email[-2:-1] and trigger_email[-2:-1] == trigger_email[-3:-2]:
             hahaha("Alerta: Ação do Inter MUITO valorizada","Cara, compra logo",to_addrs)
             print("Alerta Enviado: Compra Logo")
@@ -74,4 +67,3 @@ while (True):
             if trigger_email[-1:] == trigger_email[-2:-1]:
                 hahaha("Alerta: Ação do Inter valorizada", "Hora de Comprar",to_addrs)
                 print("Alerta Enviado: Compra 1")
-        """
