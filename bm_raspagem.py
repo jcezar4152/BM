@@ -55,7 +55,7 @@ while (True):
         q_result = list(cursor.fetchall())
         connection.commit()
         connection.close()
-        to_addrs = '' # q_result[0:1]
+        to_addrs = '' # q_result[0:1].
         for x in list(q_result):
             to_addrs += ''.join(x)
             to_addrs += ''.join('; ')
