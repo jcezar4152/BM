@@ -2,6 +2,7 @@
 import smtplib # Biblioteca para utilizar o protocolo SMTP no envio de Emails
 import email.mime.text # Função para envio de email em Texto Básico
 
+
 def hahaha(assunto, mensagem, to_addrs):
 # INICIO - Autenticação de Email - host e port padrão do GMAIL
     smtp_ssl_host = 'smtp.gmail.com'
@@ -12,7 +13,7 @@ def hahaha(assunto, mensagem, to_addrs):
 
     # INICIO - Definição das váriavéis do envio de Email
     from_addr = 'blackmambabot1@gmail.com'
-    # to_addrs = ['blackmambabot1@gmail.com']
+    # to_addrs = ['blackmambabot1@gmail.com'] # passou a ser informado no SELECT feito em BM_raspagem
     message = email.mime.text.MIMEText(mensagem)
     message['subject'] = assunto
     message['from'] = from_addr
