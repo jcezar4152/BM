@@ -11,9 +11,9 @@ connection = pymysql.connect(host='bvzfdagnfqepipz70gyw-mysql.services.clever-cl
 
 df = pd.read_sql("select * from bvzfdagnfqepipz70gyw.Historico", connection) #faz um select na tabela
 
-
+pd.plotting.register_matplotlib_converters()
 plt.plot(df['data_acao'], df['valor_fechado']) #seleciona as colunas para mostrar no gráfico
-plt.show()
-
+#plt.show()
+plt.savefig('/Users/Aluno/Desktop/Informatica/Python 3.7/webbot_blackmamba/diario.png')
 
 connection.close()
