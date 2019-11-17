@@ -13,6 +13,7 @@
 
 #### Masters
 [Lucas Leão](https://gitlab.com/lucasdlg5)
+
 [Kevin Hizatsuki](https://gitlab.com/kevin799)
 
 # **O que é o Black Mamba!**
