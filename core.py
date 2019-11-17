@@ -1,8 +1,9 @@
 from telegram.ext import CommandHandler, Filters, MessageHandler, Updater
 
-from conf.settings import TELEGRAM_TOKEN, HTTP_CATS_URL
-from BM_Twitter import tweets
+from Telegram.conf.settings import TELEGRAM_TOKEN, HTTP_CATS_URL
+from PandasTeste import plt
 
+plt.savefig('diario.png')
 
 def start(bot, update):
     response_message = "Olá"
@@ -13,7 +14,7 @@ def start(bot, update):
 def acao(bot, update):
     response_message = tweets
     bot.send_photo(chat_id=update.message.chat_id,
-                   photo=open('diario.jpg', 'rb'))
+                   photo=open('diario.png', 'rb'))
     bot.send_message(
         chat_id=update.message.chat_id,
         text=response_message

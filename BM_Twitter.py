@@ -1,10 +1,11 @@
 import datetime
 from twitter_scraper import get_tweets
 from BD import cursor, connection
-cursor.execute("SELECT DATA_ACAO FROM bvzfdagnfqepipz70gyw.Historico WHERE valor_variacao > 2 or valor_variacao<-2")
+cursor.execute("SELECT DATA_ACAO FROM bvzfdagnfqepipz70gyw.Historico WHERE valor_variacao > 3 or valor_variacao<-3")
 result=cursor.fetchall()
 historico=[]
 x=0
+tweets=[]
 try:
     while(x<=len(result)):
         historico.append(str(result[x]).replace('(datetime.date(','').replace('),)','').replace(' ','').replace(',','-'))
@@ -23,6 +24,8 @@ except:
             else:
                 if(dcoleta==data):
                     print(dcoleta,colet)
+                    tweets.append(colet)
+                    print('arquivado')
                     x=x-1
     except:
         if(x<=0):

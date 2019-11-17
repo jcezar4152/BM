@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
-import pymysql
 import datetime
+from BD import cursor,connection
 ### as vareaveis abaixo sÃ£o contadores para pegar a posiÃ§Ã£o exata dos valores no html
 b=8
 c=9
@@ -21,11 +21,7 @@ html=nav.text
 soup=BeautifulSoup(html,'html.parser')
 a=soup.findAll('td')
 valida=True
-connection = pymysql.connect(host='bvzfdagnfqepipz70gyw-mysql.services.clever-cloud.com',
-                                 port=3306,
-                                 user='ufgpsjx1cswrmye3',
-                                 password='ZoKM7HXwAaZAgd9ugpTr')
-cursor = connection.cursor()
+
 while(valida==True):
         try:
                 data_acao=a[b].text
