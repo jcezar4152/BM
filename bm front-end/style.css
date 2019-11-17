@@ -1,0 +1,286 @@
+#wrapper {
+  padding-left: 180px;
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper {
+  margin-left: -180px;
+  left: 180px;
+  width: 180px;
+  background: rgb(0, 114, 188);
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+#wrapper.active {
+  padding-left: 0;
+}
+
+#wrapper.active #sidebar-wrapper {
+  left: 0;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+.nav {
+  display: block;
+}
+
+.sidebar-nav {
+  position: relative;
+  top: 50px;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}
+
+.sidebar-nav li a {
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li.active {
+  color: #fff;
+  background: rgb(8, 94, 155);
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+.icon-blue {
+  color: rgb(0, 177, 221);
+}
+.icon-margin {
+  margin-left: -25px;
+}
+
+.fa-bars {
+  margin-top: 95px;
+}
+
+.menu {
+  display: none;
+}
+
+.toogle-menu {
+  display: block;
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 20000;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#topbar {
+  height: 100px;
+  background: rgb(0, 114, 188);
+}
+
+#userpic {
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+}
+
+.btn {
+  background-color: transparent;
+  margin-left: 90%;
+  margin-top: 1%;
+  width: 140px;
+}
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem transparent;
+}
+.btn.hover,
+.btn:hover {
+  background-color: rgb(8, 94, 155);
+}
+
+.btn:active {
+  background-color: rgb(8, 94, 155);
+}
+
+.dropdown-toggle {
+  color: white;
+}
+
+.cards {
+  width: 1000px;
+  height: 380px;
+  margin-top: 1%;
+  margin-left: 20%;
+}
+
+#cardorganizador {
+  margin-top: 3%;
+  margin-left: 20%;
+  border-color: transparent;
+}
+
+#indextopbar {
+  height: 220px;
+  background: rgb(0, 114, 188);
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+#form {
+  position: absolute;
+  left: 1000px;
+  top: 20px;
+}
+
+.form-check-input {
+  margin-top: 7.5px;
+}
+
+#btncadastro {
+  margin: 0 auto;
+  background-color: rgb(0, 114, 188);
+}
+
+#btncadastro:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem transparent;
+}
+
+#btncadastro:hover {
+  background-color: rgb(8, 94, 155);
+}
+
+#btncadastro:active {
+  background-color: rgb(8, 94, 155);
+}
+
+.h3 {
+  margin-left: 800px;
+}
+
+.alinhar-direita-margemtopo {
+  margin-top: 250px !important;
+  position: absolute;
+  margin-left: 67%;
+  width: 400px !important;
+}
+
+/* responsive section */
+@media (max-width: 767px) {
+  #wrapper {
+    padding-left: 0;
+  }
+
+  #wrapper.active {
+    position: relative;
+    left: 180px;
+  }
+
+  #wrapper.active #sidebar-wrapper {
+    left: 180px;
+    width: 180px;
+    transition: all 0.4s ease 0s;
+  }
+
+  #menu-toggle {
+    display: inline-block;
+  }
+
+  .inset {
+    padding: 15px;
+  }
+
+  .btn {
+    margin-left: 80%;
+    margin-top: 1%;
+  }
+
+  .cards {
+    width: 260px;
+    height: 180px;
+    margin-top: 3%;
+    margin-left: 30%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .icon-margin {
+    margin-right: 10px;
+  }
+
+  .btn {
+    margin-left: 75%;
+    margin-top: 1%;
+  }
+
+  .cards {
+    width: 270px;
+    height: 180px;
+    margin-top: 3%;
+    margin-left: 20%;
+  }
+
+  #wrapper {
+    padding-left: 180px;
+    transition: all 0.4s ease 0s;
+  }
+
+  #sidebar-wrapper {
+    margin-left: -130px;
+    left: 130px;
+    width: 130px;
+  }
+
+  .sidebar-nav {
+    font-size: 12px;
+  }
+
+  .fa-bars {
+    font-size: 20px;
+  }
+
+  #topbar {
+    height: 70px;
+  }
+
+  .toogle-menu {
+    top: -15px;
+  }
+}
