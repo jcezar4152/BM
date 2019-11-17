@@ -4,8 +4,11 @@
 
 #### Scrum Team
 [Arthur Cardoso](https://gitlab.com/arthur_rinaldi00)
+
 [Daniel Delgado](https://gitlab.com/DNLMR)
+
 [Julio Cézar](https://gitlab.com/j.cezar4152)
+
 [Sabrina Calado](https://gitlab.com/sabrinacalado)
 
 #### Masters
