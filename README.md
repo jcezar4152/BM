@@ -28,7 +28,7 @@ Queremos auxiliar pessoas com vontade de iniciar sua vida como Traders casuais p
 
 ## **Arsenal** 🔫
 
-Além da litros de café contamos com as seguintes ferramentas para desenvolver o projeto:
+Contamos com as seguintes ferramentas para desenvolver o projeto:
 
 * Python 3.7 - Linguagem principal;
 * Zen of Python - boas práticas para o Projeto;
