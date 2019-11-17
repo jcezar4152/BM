@@ -1,13 +1,7 @@
-import mysql.connector
 import datetime
 from twitter_scraper import get_tweets
-mydb = mysql.connector.connect(
-     host='bvzfdagnfqepipz70gyw-mysql.services.clever-cloud.com',
-     port=3306,
-     user='ufgpsjx1cswrmye3',
-     password='ZoKM7HXwAaZAgd9ugpTr')
-cursor=mydb.cursor()
-cursor.execute("SELECT DATA_ACAO FROM bvzfdagnfqepipz70gyw.Historico WHERE valor_variacao > 3 or valor_variacao<-3")
+from BD import cursor, connection
+cursor.execute("SELECT DATA_ACAO FROM bvzfdagnfqepipz70gyw.Historico WHERE valor_variacao > 2 or valor_variacao<-2")
 result=cursor.fetchall()
 historico=[]
 x=0
@@ -24,8 +18,6 @@ except:
             dcoleta = colet['time'].date()
             colet = colet['text']
             data=datetime.datetime.strptime(historico[x],'%Y-%m-%d').date()
-            #print(data,' ',dcoleta)
-            #print(x)
             if (data > dcoleta):
                 x = x - 1
             else:
@@ -35,3 +27,4 @@ except:
     except:
         if(x<=0):
             print('Concluido')
+            connection.close()
