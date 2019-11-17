@@ -1,19 +1,15 @@
 # 💥 WEBBOT  BLACK MAMBA💥
 
-## **Equipe**
+## **Equipe**  💻
 
-#### Dev Team 💻
-[Arthur Cardoso](https://gitlab.com/arthur_rinaldi00)
-
-[Daniel Delgado](https://gitlab.com/DNLMR)
-
-[Julio Cézar](https://gitlab.com/j.cezar4152)
-
+#### Dev Team
+[Arthur Cardoso](https://gitlab.com/arthur_rinaldi00)  
+[Daniel Delgado](https://gitlab.com/DNLMR)  
+[Julio Cézar](https://gitlab.com/j.cezar4152)  
 [Sabrina Calado](https://gitlab.com/sabrinacalado)
 
 #### Masters
-[Lucas Leão](https://gitlab.com/lucasdlg5)
-
+[Lucas Leão](https://gitlab.com/lucasdlg5)  
 [Kevin Hizatsuki](https://gitlab.com/kevin799)
 
 ## **O que é o Black Mamba!** 🔍
