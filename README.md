@@ -25,7 +25,7 @@ Para isso o bot irã capturar os dados em tempo real do valor de uma ação e co
 
 ## **But..Why ?** ☝️ 
 
-Queremos auxiliar pessoas com vontade de iniciar sua vida como Traders casuais porem não possuem o tempo necessario para aprenderem sobre investimentos, o nosso Bot auxilia os usuários a entrarem nesse universo com mais segurança e com certo amparo.
+Queremos auxiliar pessoas com vontade de iniciar sua vida como Traders casuais porem não possuem o tempo necessario para aprender sobre investimentos, o nosso Bot auxilia os usuários a entrarem nesse universo com mais segurança e com certo amparo.
 
 
 ## **Arsenal** 🔫
