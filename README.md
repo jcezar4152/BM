@@ -1,16 +1,57 @@
-# WebBot_BlackMamba
+<div align="center">
+    <img src="./logo.jpg" width="320" />
+    <div height="2"></div>
+</div>
 
-Projeto desenvolvido integrando alunos de 6º e 1º Semestre pela Faculdade FATEC SJC
+
+# 💥 WEBBOT  BLACK MAMBA💥
+
+## **Equipe**  💻
+
+#### Dev Team
+[Arthur Cardoso](https://gitlab.com/arthur_rinaldi00)  
+[Daniel Delgado](https://gitlab.com/DNLMR)  
+[Julio Cézar](https://gitlab.com/j.cezar4152)  
+[Sabrina Calado](https://gitlab.com/sabrinacalado)
+
+#### Masters
+[Lucas Leão](https://gitlab.com/lucasdlg5)  
+[Kevin Hizatsuki](https://gitlab.com/kevin799)
+
+## **O que é o Black Mamba!** 🔍
+
+O Bot Black Mamba é um bot cuja inteção principal é apontar um bom momento para comprar ou vender uma ação.
+Para isso o bot irã capturar os dados em tempo real do valor de uma ação e comparar com os historicos de variações dessa mesmasa ações em outros peridos em conjunto com uma mapeamento das noticias que podem influenciar com o valor da ação.
+
+## **But..Why ?** ☝️ 
+
+Queremos auxiliar pessoas com vontade de iniciar sua vida como Traders casuais porem não possuem o tempo necessario para aprender sobre investimentos, o nosso Bot auxilia os usuários a entrarem nesse universo com mais segurança e com certo amparo.
 
 
-Voltado para o público com interesse de se tornar investidor, porém sem tempo para adquirir conhecimento para investir,
-o BlackMamba é um analista da bolsa de valores que irá monitorar as ações de uma empresa especifica (Atualmente somente o banco Inter),
-e fazer uma comparação dos últimos 12 meses de como andou aquela ação, através de uma análise de dados.
+## **Arsenal** 🔫
 
-O WebBot irá validar se aquele momento é ideal para uma compra ou venda de ação e após isso irá notificar o usuário via e-mail a possibilidade de ganhar uma renda extra.
+Contamos com as seguintes ferramentas para desenvolver o projeto:
 
-Utilizaremos a linguagem python para fazer toda a captura, análise dos dados e envio da informação para o usuário, a aplicação terá também uma interface web
-para fazer todo acompanhamento de gráficos e configurações do usuário como período a ser analisado e definição de e-mail Vale lembrar que para o funcionamento 
-do BlackMamba será necessário tanto o servidor estar conectado na internet para realizar a coleta de dados a cada 20 segundos, quanto o cliente para o 
-recebimento das notificações e até mesmo para acesso ao BlackMambaWeb. 
+* Python 3.7 - Linguagem principal;
+* Zen of Python - boas práticas para o Projeto;
+* PyCharm e/ou Visual Studio Code - IDE's;
+* Django, Javascript, HTML5, CSS,  Bootstrap - Front End WEB;
+* MySQL - Banco de Dados;
+* Conceitos do SCRUM - Norteador do Projeto.
+* Bibliotecas Python - (...)
+
+
+## **Oque o usuário pode fazer ?** 🔑
+
+* Criação de conta (normal ou usuário “Gold");
+* Consultar gráfico em tempo real e histórico;
+* Alterar informações de seu cadastro;
+* Alterar parametros de notificações.
+
+## **How does it Work ?** 👷
+
+(...) Como funciona o back
+
+
+
 
