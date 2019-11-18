@@ -20,8 +20,8 @@
 
 ## **O que é o Black Mamba!** 🔍
 
-O Bot Black Mamba é um bot cuja inteção principal é apontar um bom momento para comprar ou vender uma ação.
-Para isso o bot irã capturar os dados em tempo real do valor de uma ação e comparar com os historicos de variações dessa mesmasa ações em outros peridos em conjunto com uma mapeamento das noticias que podem influenciar com o valor da ação.
+O Bot Black Mamba tem como diretriz apontar um bom momento para comprar ou vender uma ação.
+Para isso o bot irá capturar os dados em tempo real do valor de uma ação e comparar com os historicos de variações dessa mesma ação em outros peridos em conjunto com uma mapeamento das noticias que podem influenciar o valor da ação.
 
 ## **But..Why ?** ☝️ 
 
