@@ -1,4 +1,4 @@
-"""Para rodar o programa serÃ¡ necessario duas Bibliotecas(Selenium e BeautifulSoup)
+""" Para rodar o programa serÃ¡ necessario duas Bibliotecas(Selenium e BeautifulSoup)
 Para instalar Ã© sÃ³  rodar os seguintes comandos no prompt da maquina:
 # >>>> AVISO DA SABRINA  - O COMMIT DO COMPANHEIRO ROBSON FOI UM ERRO ONDE AS CREDENCIAIS ESTAVAM GRAVADAS NO PC FATEC <<<<
 pip install Selenium bs4

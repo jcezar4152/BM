@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import datetime
-from BD import cursor,connection
+from db.mysql_connection import cursor,connection
 ### as vareaveis abaixo sÃ£o contadores para pegar a posiÃ§Ã£o exata dos valores no html
 b=8
 c=9

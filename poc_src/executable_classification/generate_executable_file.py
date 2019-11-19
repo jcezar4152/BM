@@ -7,7 +7,7 @@ if sys.platform == "win64":
     base = "Win64GUI"
 
 Executables = [
-    Executable("Classificacao.py", base=base)
+    Executable("classification.py", base=base)
 ]
 
 buildOptions = dict(

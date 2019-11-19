@@ -68,6 +68,10 @@ docs/_build/
 # PyBuilder
 target/
 
+# Venv Exclusion
+venv/*
+venv/
+
 # pyenv
 .python-version
 

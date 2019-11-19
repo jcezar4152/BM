@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from BD import connection
+from db.mysql_connection import connection
 
 df = pd.read_sql("select * from bvzfdagnfqepipz70gyw.Historico", connection) #faz um select na tabela
 

@@ -1,7 +1,7 @@
 from telegram.ext import CommandHandler, Filters, MessageHandler, Updater
 
-from Telegram.conf.settings import TELEGRAM_TOKEN, HTTP_CATS_URL
-from PandasTeste import plt
+from notification.telegram.conf.settings import TELEGRAM_TOKEN, HTTP_CATS_URL
+from charts.generate_charts import plt
 
 plt.savefig('diario.png')
 

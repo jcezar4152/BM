@@ -1,6 +1,6 @@
 import datetime
 from twitter_scraper import get_tweets
-from BD import cursor, connection
+from db.mysql_connection import cursor, connection
 cursor.execute("SELECT DATA_ACAO FROM bvzfdagnfqepipz70gyw.Historico WHERE valor_variacao > 3 or valor_variacao<-3")
 result=cursor.fetchall()
 historico=[]
