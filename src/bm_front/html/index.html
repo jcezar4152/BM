@@ -18,13 +18,115 @@
       href="https://fonts.googleapis.com/css?family=Dosis&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
   </head>
   <body>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <div
+      class="fixed-top banner"
+      style="height: 23%; background-color: rgb(54, 54, 54);"
+    >
+      <img src="../img/bmlogo.png" class="px-4" alt="Logo BlackMamba" />
+      <div
+        class="card p-3 bg-transparent float-right text-white border-0"
+        style="width: 40%;"
+      >
+        <form class="row">
+          <div class="form-group col-sm-6">
+            <label for="exampleDropdownFormEmail2">Endereço de email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleDropdownFormEmail2"
+              placeholder="email@exemplo.com"
+            />
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="exampleDropdownFormPassword2">Senha</label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleDropdownFormPassword2"
+              placeholder="Senha"
+            />
+          </div>
+          <div class="form-check ml-3">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="dropdownCheck2"
+            />
+            <label class="form-check-label" for="dropdownCheck2">
+              Lembrar de mim
+            </label>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary float-right bg-primary col-sm-3"
+            style="margin-left: 70%"
+          >
+            Entrar
+          </button>
+        </form>
+      </div>
+      <div class="card bg-transparent border-0 align-right">
+        <form>
+          <h1>Cadastre - se</h1>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Nome" />
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Sobrenome" />
+            </div>
+          </div>
+          <div class="form-group mt-2">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleDropdownFormEmail2"
+              placeholder="email@exemplo.com"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              id="exampleDropdownFormPassword2"
+              placeholder="Senha"
+            />
+          </div>
+          <!-- <div class="form-check ">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="dropdownCheck2"
+            />
+            <label class="form-check-label" for="dropdownCheck2">
+              Lembrar de mim
+            </label>
+          </div> -->
+          <div>
+            <a
+              role="button"
+              class="btn btn-primary bg-primary p-2"
+              href="cadastro.html"
+              style="width: 100%;"
+            >
+              Cadastrar
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="fixed-bottom banner" style="height: 5%;">
+      <span class="text-white fixed-bottom"
+        >&copy Copyrights reserved by BlackMamba 2019</span
+      >
+    </div>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
