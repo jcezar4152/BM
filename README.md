@@ -52,7 +52,7 @@ Contamos com as seguintes ferramentas para desenvolver o projeto:
 * Alterar informações de seu cadastro;
 * Alterar parametros de notificações.
 
-## **Getting Ready for Action**
+## **Getting Ready for Action** 🚂
 ### **Pré Requisitos**
 * Possuir o Python instalado na máquina;
 * Possuir o PIP instalado e atualizado;
@@ -73,7 +73,3 @@ Contamos com as seguintes ferramentas para desenvolver o projeto:
 ## **How does it actually Works ?** 👷
 
 (...) Como funciona o back
-
-
-
-
