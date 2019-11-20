@@ -7,8 +7,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import time
-from notification.alert import hahaha
-from db.mysql_connection import cursor, connection
+from src.notification.alert import hahaha
+from src.db.mysql_connection import cursor, connection
 
 cont = int(1)
 trigger_email = []
@@ -16,7 +16,7 @@ wait =int(10) # Trocar aqui os tempos de espera - mudar para rodar na FATEC devi
 options = Options()
 options.add_argument('--headless')
 options.add_argument('--disable-gpu')
-ff = webdriver.Chrome(options=options)
+ff = webdriver.Chrome(options=options,  executable_path="../../resources/chromedriver.exe")
 ff.get('https://br.tradingview.com/symbols/BMFBOVESPA-BIDI4/')
 while (True):
     while (True):
