@@ -1,7 +1,7 @@
 from telegram.ext import CommandHandler, Filters, MessageHandler, Updater
 
-from notification.telegram.conf.settings import TELEGRAM_TOKEN, HTTP_CATS_URL
-from charts.generate_charts import plt
+from src.notification.telegram_notfy.conf.settings import TELEGRAM_TOKEN, HTTP_CATS_URL
+from src.charts.generate_charts import plt
 
 plt.savefig('diario.png')
 
@@ -12,7 +12,7 @@ def start(bot, update):
         text=response_message
     )
 def acao(bot, update):
-    response_message = tweets
+    response_message ="diario"
     bot.send_photo(chat_id=update.message.chat_id,
                    photo=open('diario.png', 'rb'))
     bot.send_message(
