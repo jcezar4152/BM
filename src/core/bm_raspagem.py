@@ -9,6 +9,16 @@ from bs4 import BeautifulSoup
 import time
 from src.notification.alert import hahaha
 from src.db.mysql_connection import cursor, connection
+from src.scrapy.history_collector import colet_history
+
+valida_historico=input("Deseja coletar historico de um ano? (S/N): ").upper()
+if(valida_historico=="S"):
+    colet_history()
+valida_cadastro= input("Você deseja se cadastrar para receber notificações do email ou até mesmo no telegram? (S/N): ").upper()
+if(valida_cadastro=="S"):
+    from cadastro import cad_cliente
+    cad_cliente()
+
 
 cont = int(1)
 trigger_email = []
